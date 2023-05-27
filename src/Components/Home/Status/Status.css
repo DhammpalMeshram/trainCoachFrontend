@@ -1,0 +1,53 @@
+
+#status {
+    display: flex;
+    flex-direction: column;
+    /* background-color: green; */
+    padding: 40px 30px;
+    gap:20px;
+    align-items: flex-start;
+    justify-content: center;
+    border: 1px gray solid;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px gray;
+    margin-top: 50px;
+}
+
+#status .statusRow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px red solid; */
+   
+}
+
+#status .seatType{
+    display: inline-flex;
+    margin-left: 10px;
+    width: 180px;
+    font-weight: 600;
+    font-size: 16px;
+
+}
+
+#status .seatQty{
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.booked{
+    color: rgb(223, 211, 211)
+}
+.available{
+    color: rgb(30, 207, 36);
+}
+.ladies{
+    color: rgb(233, 72, 99);
+}
+.gents{
+    color:rgb(211, 157, 57)
+}
+.hidden{
+    display: none;
+    color: white;
+}
