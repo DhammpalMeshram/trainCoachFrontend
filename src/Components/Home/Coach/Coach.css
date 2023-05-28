@@ -1,7 +1,5 @@
-
 #coach{
     display: flex;
-    /* align-items: center; */
     justify-content: center;
     border: 2px gray solid;
     flex-direction: column;
@@ -15,7 +13,6 @@
 #row{
     display: flex;
     flex-wrap: nowrap;
-    /* border : 3px orange solid; */
 }
 
 #row svg{
@@ -49,7 +46,6 @@
 }
 
 .hiddend{
-    /* display: none; */
     color: white;
     border: none;
 }

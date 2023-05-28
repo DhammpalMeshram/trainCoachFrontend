@@ -2,7 +2,6 @@
 #status {
     display: flex;
     flex-direction: column;
-    /* background-color: green; */
     padding: 40px 30px;
     gap:20px;
     align-items: flex-start;
@@ -16,9 +15,7 @@
 #status .statusRow {
     display: flex;
     align-items: center;
-    justify-content: center;
-    /* border: 2px red solid; */
-   
+    justify-content: center;   
 }
 
 #status .seatType{
@@ -27,7 +24,6 @@
     width: 180px;
     font-weight: 600;
     font-size: 16px;
-
 }
 
 #status .seatQty{
@@ -36,7 +32,7 @@
 }
 
 .booked{
-    color: rgb(223, 211, 211)
+    color: rgb(233, 72, 99);
 }
 .available{
     color: rgb(30, 207, 36);
@@ -50,4 +46,21 @@
 .hidden{
     display: none;
     color: white;
+}
+
+.confiredDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(245, 166, 209);
+    width: 90%;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px 5px gray;
+    padding: 10px;
+}
+
+.confiredDiv h3, h4{
+    margin: 10px 0px 10px 0px;
+    padding: 0px;
 }

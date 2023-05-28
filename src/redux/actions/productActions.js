@@ -1,7 +1,8 @@
 import axois from "axios";
 import * as actionTypes from "../constants/productConstants";
 
-const url = "http://localhost:8000";
+// const url = "http://localhost:8000";
+const url = "https://backendsupport.onrender.com";
 
 // function to get current date
 function getCurrentDate(separator=''){
@@ -15,23 +16,23 @@ function getCurrentDate(separator=''){
 export const currentDate = getCurrentDate();
 
 
-
-// middleware api for getting all seats data
+// middleware api for getting all seats data and booking them
 export const getAllProducts =(selectedDate, booking, selectedSeats)=> async(dispatch)=>{
-    // console.log(selectedDate);
     try{
-        if(booking){
-            const {data} = await axois.post(`${url}/booktickets`,{date:selectedDate,numberOfSeats:selectedSeats});
-        // console.log(data);
+        if(booking){ // this will get activated booking in occuring
+            const res = await axois.post(`${url}/booktickets`,{date:selectedDate,numberOfSeats:selectedSeats});
+            const {data} = res;
+            console.log(res);
 
             dispatch({
                 type:actionTypes.GET_PRODUCTS_SUCCESS,
                 payload:data
             })
         }
-        else{
-            const {data} = await axois.post(`${url}/getalldata`,{date:selectedDate});
-            // console.log(data);
+        else{   // this will get activated data needed initially
+            const res = await axois.post(`${url}/getalldata`,{date:selectedDate});
+            const {data} = res;
+            console.log(res);
 
             dispatch({
                 type:actionTypes.GET_PRODUCTS_SUCCESS,
@@ -46,28 +47,3 @@ export const getAllProducts =(selectedDate, booking, selectedSeats)=> async(disp
         })
     }
 }
-
-
-
-
-
-// // middleware api for getting all booking data
-// export const getProductDetails =(selectedDate)=> async(dispatch)=>{
-//     try{
-//         const {data} = await axois.post(`${url}/getseatnumbers`,{date:selectedDate});
-//         // console.log(data);
-        
-//         dispatch({
-//             type:actionTypes.GET_PRODUCT_DETAIL_SUCCESS,
-//             payload:data
-//         })
-//     }
-//     catch(err){
-//         dispatch({
-//             type:actionTypes.GET_PRODUCT_DETAIL_FAIL,
-//             payload:err.message
-//         })
-
-//     }
-    
-// }

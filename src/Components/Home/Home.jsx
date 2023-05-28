@@ -1,6 +1,4 @@
 import "./Home.css";
-// import Type from "../VehicalType/Type"
-// import Booking from "../Booking/Booking";
 
 import VehicalContainer from "./VehicalContainer/VehicalContainer";
 import BookingOptions from "./BookOptions/BookOPtions";

@@ -1,6 +1,5 @@
 import React from 'react';
 import "./Footer.css";
-// import {useNavigate} from "react-router-dom";
 
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
